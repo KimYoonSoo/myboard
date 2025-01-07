@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>파일목록</title>
+    </head>
+    <body>
+        <h1>파일목록</h1>
+        <table style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr style="border-bottom: 1px solid #000;">
+                    <th style="text-align: left; padding: 8px;">날짜</th>
+                    <th style="text-align: left; padding: 8px;">파일이름</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 8px;">오늘</td>
+                    <td style="padding: 8px;"><a href="#" onclick="showImage('01.jpg')">01</a></td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">내일</td>
+                    <td style="padding: 8px;"><a href="#" onclick="showImage('02.jpg')">02</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="imageDisplay" style="margin-top: 20px;">
+            <img id="displayedImage" src="" alt="이미지" style="max-width: 100%; display: none;">
+        </div>
+        <script>
+            function showImage(imageSrc) {
+                var img = document.getElementById('displayedImage');
+                img.src = imageSrc;
+                img.style.display = 'block';
+            }
+        </script>
+    </body>
+</html>
